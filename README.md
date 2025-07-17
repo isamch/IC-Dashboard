@@ -32,8 +32,8 @@ A modern, responsive personal dashboard web app built with **Next.js**, **React*
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd <project-directory>
+git clone https://github.com/isamch/Personal-Dashboard.git
+cd Personal-Dashboard
 ```
 
 ### 2. Install dependencies
