@@ -99,4 +99,4 @@ npm start
 
 ## 📄 License
 
-This project is for personal portfolio and educational use. Feel free to use, modify, and share! 
+By isam chajia
