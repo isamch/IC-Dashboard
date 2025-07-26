@@ -23,7 +23,6 @@ export default function ICDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 dark:from-purple-900 dark:via-blue-900 dark:to-indigo-900 transition-all duration-1000">
-      {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70"
@@ -51,7 +50,6 @@ export default function ICDashboard() {
         />
       </div>
 
-      {/* Header */}
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -79,9 +77,7 @@ export default function ICDashboard() {
         <ThemeToggle />
       </motion.header>
 
-      {/* Main Content */}
       <div className="relative z-10 flex">
-        {/* Sidebar - Desktop */}
         <motion.aside
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -99,7 +95,6 @@ export default function ICDashboard() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex-1 p-6 space-y-6"
         >
-          {/* Mobile widgets - shown only on mobile */}
           <div className="lg:hidden space-y-6">
             <WeatherWidget />
             <TodoWidget />

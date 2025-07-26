@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Cloud, Sun, CloudRain, Wind, Droplets, Search } from "lucide-react"
 
-// Helper function to choose icon based on weather description
 function getWeatherIcon(condition: string) {
   const cond = condition.toLowerCase()
   if (cond.includes("sun")) return <Sun className="h-12 w-12 text-yellow-400" />
@@ -13,13 +12,12 @@ function getWeatherIcon(condition: string) {
   return <Sun className="h-12 w-12 text-yellow-400" />
 }
 
-// Static list of many Moroccan cities for suggestions
 const CITY_SUGGESTIONS = [
   "Casablanca", "Rabat", "Marrakech", "Fes", "Tangier", "Agadir", "Oujda", "Kenitra", "Tetouan", "Safi", "Mohammedia", "Khouribga", "El Jadida", "Beni Mellal", "Nador", "Taza", "Settat", "Larache", "Ksar El Kebir", "Khemisset", "Guelmim", "Berrechid", "Taourirt", "Berkane", "Ouarzazate", "Al Hoceima", "Errachidia", "Tiznit", "Essaouira", "Taroudant", "Tiflet", "Sidi Slimane", "Sidi Kacem", "Témara", "Ouazzane", "Dakhla", "Azrou", "Midelt", "Sefrou", "Youssoufia", "Guercif", "Fnideq", "Martil", "Ait Melloul", "Ait Ourir", "Ait Baha", "Ait Attab", "Ait Bouayach", "Ait Daoud", "Ait Faska", "Ait Hadi", "Ait Ikkou", "Ait Ishaq", "Ait Majden", "Ait Melloul", "Ait Sedrate Jbel El Oulia", "Ait Sedrate Sahl El Gharbia", "Ait Sedrate Sahl El Oulia", "Ait Yaazem", "Akhfenir", "Akhfennir", "Akhourb", "Aklim", "Aknoul", "Alaouite", "Alnif", "Amalou Ighriben", "Amizmiz", "Anza", "Arbaoua", "Arfoud", "Asilah", "Azemmour", "Azilal", "Azrou", "Bab Berred", "Bab Taza", "Ben Guerir", "Ben Taieb", "Beni Ansar", "Beni Bouayach", "Beni Drar", "Beni Mellal", "Benslimane", "Berkane", "Bouarfa", "Boujdour", "Boulemane", "Bouznika", "Chefchaouen", "Chichaoua", "Demnate", "Drarga", "El Aioun Sidi Mellouk", "El Hajeb", "El Jadida", "El Kelaa des Sraghna", "El Ksiba", "Erfoud", "Errachidia", "Essaouira", "Figuig", "Fkih Ben Salah", "Fnideq", "Fquih Ben Salah", "Guelmim", "Guercif", "Ifrane", "Imzouren", "Inzegane", "Jerada", "Kariat Arekmane", "Karia Ba Mohamed", "Kelaat Sraghna", "Khemisset", "Khenifra", "Khouribga", "Ksar El Kebir", "Ksar es Souk", "Laayoune", "Larache", "M'diq", "Martil", "Meknes", "Midelt", "Mohammedia", "Moulay Bousselham", "Nador", "Ouarzazate", "Oued Zem", "Oujda", "Oulad Teima", "Oulad Tayeb", "Oulad Yaich", "Rabat", "Safi", "Salé", "Sefrou", "Settat", "Sidi Bennour", "Sidi Ifni", "Sidi Kacem", "Sidi Slimane", "Skhirat", "Souk El Arbaa", "Tafraout", "Taghazout", "Taliouine", "Tan-Tan", "Taounate", "Taourirt", "Tarfaya", "Taroudant", "Taza", "Temara", "Tiflet", "Tinghir", "Tiznit", "Youssoufia"
 ];
 
 export function WeatherWidget() {
-  // State for weather data, loading, error, and city input
+  
   const [weather, setWeather] = useState<null | {
     temp: number
     condition: string
@@ -35,7 +33,6 @@ export function WeatherWidget() {
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Fetch weather data for a city or current location
   async function fetchWeather(cityName?: string) {
     setLoading(true)
     setError("")
