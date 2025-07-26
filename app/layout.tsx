@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Personal Dashboard",
+  title: "IC Dashboard",
   description: "A sleek personal dashboard with animated widgets",
   generator: 'v0.dev',
   icons: {

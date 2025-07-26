@@ -11,7 +11,7 @@ import { SlidingPanel } from "@/components/sliding-panel"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export default function Dashboard() {
+export default function ICDashboard() {
   const [isPanelOpen, setIsPanelOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
@@ -73,7 +73,7 @@ export default function Dashboard() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Personal Dashboard
+            IC Dashboard
           </motion.h1>
         </div>
         <ThemeToggle />

@@ -1,4 +1,4 @@
-# Personal Dashboard
+# IC Dashboard
 
 A modern, responsive personal dashboard web app built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. This dashboard helps you stay organized and productive with animated widgets for weather, to-dos, time, and productivity stats.
 
